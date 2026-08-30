@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 
-class resident(models.Model):
+class Resident(models.Model):
     _name = 'resident.resident'
     _description = 'resident.resident'
 
