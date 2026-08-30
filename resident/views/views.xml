@@ -25,13 +25,13 @@
 
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="resident_action_window">
-      <field name="name">resident window</field>
+      <field name="name">Resident Information</field>
       <field name="res_model">resident.resident</field>
       <field name="view_mode">list,form</field>
     </record>
 
     <!-- Top menu item -->
-    <menuitem name="resident" id="resident.menu_root" action="resident_action_window"/>
+    <menuitem name="Resident Info" id="resident_menu_root" action="resident_action_window"/>
 
   </data>
 </odoo>
