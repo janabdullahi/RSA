@@ -1,7 +1,7 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-    <record model="ir.ui.view" id="resident.list">
+    <record model="ir.ui.view" id="resident_list">
       <field name="name">resident list</field>
       <field name="model">resident.resident</field>
       <field name="arch" type="xml">
@@ -20,6 +20,37 @@
           <field name="private_phone"/>
           <field name="private_email"/>
         </list>
+      </field>
+    </record>
+
+        <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="resident_form">
+      <field name="name">resident form</field>
+      <field name="model">resident.resident</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="tenant_name"/>
+                <field name="tenant_middle_name"/>
+                <field name="tenant_last_name"/>
+                <field name="tenant_move_in_date"/>
+                <field name="tenant_move_out_date"/>
+                <field name="tenancy_start_date"/>
+                <field name="tenancy_end_date"/>
+                <field name="Tenancy_duration"/>
+              </group>
+              <group>
+                <field name="private_phone"/>
+                <field name="private_email"/>
+                <field name="pets"/>
+                <field name="letting_agent"/>
+                <field name="parking"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
       </field>
     </record>
 
