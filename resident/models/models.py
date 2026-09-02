@@ -7,13 +7,13 @@ class Resident(models.Model):
     _name = 'resident.resident'
     _description = 'resident.resident'
 
-    tenant_name = fields.Char('Name', required=True)
+    tenant_name = fields.Char('First Name', required=True)
     tenant_middle_name = fields.Char('Middle Name')
     tenant_last_name = fields.Char('Last Name', required=True)
-    tenant_move_in_date = fields.Datetime('Move in', required=True)
-    tenant_move_out_date = fields.Datetime('Move out')
-    tenancy_start_date = fields.Datetime('Tenancy start Date', required=True)
-    tenancy_end_date = fields.Datetime('Tenancy end Date')
+    tenant_move_in_date = fields.Datetime('Move In', required=True)
+    tenant_move_out_date = fields.Datetime('Move Out')
+    tenancy_start_date = fields.Datetime('Tenancy Start Date', required=True)
+    tenancy_end_date = fields.Datetime('Tenancy End Date')
     Tenancy_duration = fields.Selection([
         ('less', 'Less than 6 Month'),
         ('6month', '6 Month'),
