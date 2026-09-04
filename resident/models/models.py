@@ -6,6 +6,7 @@ from odoo import models, fields, api
 class Resident(models.Model):
     _name = 'resident.resident'
     _description = 'resident.resident'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     tenant_name = fields.Char('First Name', required=True)
     tenant_middle_name = fields.Char('Middle Name')

@@ -50,6 +50,7 @@
               </group>
             </group>
           </sheet>
+          <chatter reload_on_follower="True"/>
         </form>
       </field>
     </record>
