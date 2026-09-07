@@ -11,8 +11,8 @@ class Resident(models.Model):
     tenant_name = fields.Char('First Name', required=True)
     tenant_middle_name = fields.Char('Middle Name')
     tenant_last_name = fields.Char('Last Name', required=True)
-    tenant_move_in_date = fields.Datetime('Move In', required=True)
-    tenant_move_out_date = fields.Datetime('Move Out')
+    tenant_move_in_date = fields.Datetime('Move In Date', required=True)
+    tenant_move_out_date = fields.Datetime('Move Out Date')
     tenancy_start_date = fields.Datetime('Tenancy Start Date', required=True)
     tenancy_end_date = fields.Datetime('Tenancy End Date')
     Tenancy_duration = fields.Selection([
@@ -21,7 +21,7 @@ class Resident(models.Model):
         ('12month', '1 Year'),
         ('18month', '1.5 Year'),
         ('24month', '2 Year'),
-        ('more', 'More'),
+        ('more', 'More than 2 Year'),
     ])
     pets = fields.Selection([
         ('yes', 'Yes'),
@@ -29,5 +29,5 @@ class Resident(models.Model):
     ], string="Pets")
     letting_agent = fields.Char()
     parking = fields.Char()
-    private_phone = fields.Char()
-    private_email = fields.Char()
+    private_phone = fields.Char(' Phone No.')
+    private_email = fields.Char('Email', required=True)
