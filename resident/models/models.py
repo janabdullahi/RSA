@@ -7,6 +7,7 @@ class Resident(models.Model):
     _name = 'resident.resident'
     _description = 'resident.resident'
     _inherit = ['mail.thread', 'mail.activity.mixin']
+    _rec_name = 'tenant_name'
 
     tenant_name = fields.Char('First Name', required=True)
     tenant_middle_name = fields.Char('Middle Name')
