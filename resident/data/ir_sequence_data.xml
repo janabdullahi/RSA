@@ -1,0 +1,14 @@
+<odoo>
+    <data noupdate="1">
+
+        <!--  Sequences for Residents  -->
+        <record id="resident_resident_sequence" model="ir.sequence">
+            <field name="name">resident system</field>
+            <field name="code">resident.resident</field>
+            <field name="prefix">RR</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

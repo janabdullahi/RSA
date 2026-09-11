@@ -9,6 +9,7 @@ class Resident(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'tenant_name'
 
+    resident_ref_No = fields.Char("Reference No.", default='New', copy=False)
     tenant_name = fields.Char('First Name', required=True)
     tenant_middle_name = fields.Char('Middle Name')
     tenant_last_name = fields.Char('Last Name', required=True)
@@ -32,3 +33,11 @@ class Resident(models.Model):
     parking = fields.Char()
     private_phone = fields.Char(' Phone No.')
     private_email = fields.Char('Email', required=True)
+    
+    
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get('resident_ref_No', 'New') == 'New':
+                vals['resident_ref_No'] = self.env['ir.sequence'].next_by_code('resident.resident') or 'New'
+        return super().create(vals_list)
