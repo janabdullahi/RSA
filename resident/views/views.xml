@@ -6,6 +6,7 @@
       <field name="model">resident.resident</field>
       <field name="arch" type="xml">
         <list>
+          <field name="resident_ref_No"/>
           <field name="tenant_name"/>
           <field name="tenant_last_name"/>
           <field name="tenant_move_in_date"/>
