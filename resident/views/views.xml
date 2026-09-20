@@ -1,5 +1,19 @@
 <odoo>
   <data>
+
+  <!-- explicit search view definition -->
+    <record id="resident_search_view" model="ir.ui.view">
+      <field name="name">resident.search.view</field>
+      <field name="model">resident.resident</field>
+      <field name="type">search</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="resident_ref_No" string="Ref No."/>
+        </search>
+      </field>
+    </record>
+
+
     <!-- explicit list view definition -->
     <record model="ir.ui.view" id="resident_list">
       <field name="name">resident list</field>
