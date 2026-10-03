@@ -9,6 +9,10 @@
       <field name="arch" type="xml">
         <search>
           <field name="resident_ref_No" string="Ref No."/>
+          <field name="tenant_name" string="Name"/>
+          <field name="tenant_last_name" string="Last Name"/>
+          <field name="private_phone" string="Private Phone"/>
+          <field name="private_email" string="Private Email"/>
         </search>
       </field>
     </record>
