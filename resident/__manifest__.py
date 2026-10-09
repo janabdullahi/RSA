@@ -39,6 +39,8 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'mail'],
+    'application': True,
+    'installable': True,
 
     # always loaded
     'data': [
